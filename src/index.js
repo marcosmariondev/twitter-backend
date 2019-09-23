@@ -13,7 +13,7 @@ mongoose.connect(
     useNewUrlParser: true
   }
 );
-app.use((req, res) => {
+app.use((req, res, next) => {
   req.io = io;
   return next();
 });
